@@ -588,6 +588,17 @@ function resetCard(duration = 500) {
  */
 function lottery() {
   rotateBall().then(() => {
+
+
+    //todo:一等奖中奖限制
+    log(currentPrize.type)
+    basicData.leftUsers= basicData.leftUsers.filter(user => {
+      return user[3]==0;
+    });
+
+    log(basicData.leftUsers)
+
+
     // 将之前的记录置空
     currentLuckys = [];
     selectedCardIndex = [];
@@ -840,3 +851,8 @@ window.onload = function () {
     musicBox.click();
   }, 1000);
 };
+
+function log(text) {
+  global.console.log(text);
+  global.console.log("-----------------------------------------------");
+}
