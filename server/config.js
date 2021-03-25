@@ -18,35 +18,35 @@ const prizes = [
     count: 1,
     text: "一等奖",
     title: "苹果平板电脑",
-    img: "../img/secrit.jpg"
+    img: "../img/pb.jpg"
   },
   {
     type: 2,
     count: 2,
     text: "二等奖",
     title: "黑科技筋膜枪",
-    img: "../img/mbp.jpg"
+    img: "../img/jmq.jpg"
   },
   {
     type: 3,
     count: 3,
     text: "三等奖",
     title: "时尚眼部按摩仪",
-    img: "../img/huawei.png"
+    img: "../img/amy.jpg"
   },
   {
     type: 4,
     count: 5,
     text: "四等奖",
     title: "舒适床品四件套",
-    img: "../img/ipad.jpg"
+    img: "../img/sjt.jpg"
   },
   {
     type: 5,
     count: 10,
     text: "五等奖",
     title: "夏日凉爽便携式小风扇",
-    img: "../img/spark.jpg"
+    img: "../img/fs.jpg"
   },
 ];
 

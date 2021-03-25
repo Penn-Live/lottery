@@ -258,7 +258,7 @@ function bindEvent() {
           // 抽奖
           lottery();
         });
-        addQipao(`正在抽取[${currentPrize.title}],调整好姿势`);
+        addQipao(`正在抽取[${currentPrize.title||'新年运气'}],调整好姿势`);
         break;
       // 重新抽奖
       case "reLottery":
@@ -487,7 +487,7 @@ function selectCard(duration = 600) {
 
   let text = currentLuckys.map(item => item[1]);
   addQipao(
-    `恭喜${text.join("、")}获得${currentPrize.title}, 新的一年必定旺旺旺。`
+    `恭喜${text.join("、")}获得${currentPrize.title||'祝福一份'}, 新的一年必定旺旺旺。`
   );
 
   selectedCardIndex.forEach((cardIndex, index) => {
