@@ -592,13 +592,13 @@ function lottery() {
 
     //todo:一等奖中奖限制
     log(currentPrize.type)
-    basicData.leftUsers= basicData.leftUsers.filter(user => {
-      return user[3]==0;
-    });
-
+    if(currentPrize.type==1){
+      basicData.leftUsers= basicData.leftUsers.filter(user => {
+        return user[3]==1;
+      });
+      //log("一等奖花落谁家："+basicData.leftUsers)
+    }
     log(basicData.leftUsers)
-
-
     // 将之前的记录置空
     currentLuckys = [];
     selectedCardIndex = [];
@@ -690,7 +690,7 @@ function changeCard(cardIndex, user) {
 
   card.innerHTML = `<div class="company">${COMPANY}</div><div class="name">${
     user[1]
-  }</div><div class="details">${user[0]}<br/>${user[2] || "PSST"}</div>`;
+  }</div><div class="details">${user[2] || "PSST"}<br/>恭喜🎉🎉🎉</div>`;
 }
 
 /**
